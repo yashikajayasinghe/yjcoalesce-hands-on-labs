@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "7"
+mappingDefinitions:
+  SRC:
+    database: JAYASI
+    schema: WORKDEV
+  WORK:
+    database: JAYASI
+    schema: WORKDEV
+name: DEV
+type: Environment
