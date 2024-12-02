@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "18"
+includeSelector: "+{ location: WRK name: STG_LINEITEM_PART }"
+name: Reg710JobOne
+type: Job
