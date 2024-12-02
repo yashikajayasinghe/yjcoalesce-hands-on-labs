@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "30"
+mappingDefinitions:
+  SRC:
+    database: ""
+    schema: ""
+  WRK:
+    database: ""
+    schema: ""
+name: Regression 710 Env
+type: Environment
