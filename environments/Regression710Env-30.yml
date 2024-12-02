@@ -3,7 +3,7 @@ id: "30"
 mappingDefinitions:
   SRC:
     database: SNOWFLAKE_SAMPLE_DATA
-    schema: TPCH_SF1000
+    schema: TPCH_SF10
   WRK:
     database: AAAA_YJ_P2
     schema: QA710_ENV
