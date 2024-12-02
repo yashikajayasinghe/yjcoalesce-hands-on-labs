@@ -2,10 +2,10 @@ fileVersion: 1
 id: "30"
 mappingDefinitions:
   SRC:
-    database: ""
-    schema: ""
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1000
   WRK:
-    database: ""
-    schema: ""
+    database: AAAA_YJ_P2
+    schema: QA710_ENV
 name: Regression 710 Env
 type: Environment
