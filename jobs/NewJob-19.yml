@@ -1,6 +1,6 @@
 excludeSelector: ""
 fileVersion: 1
 id: "19"
-includeSelector: "{ location: SRC name: LINEITEM } OR { location: SRC name: PART } OR { location: WRK name: STG_LINEITEM } OR { location: WRK name: STG_LINEITEM_PART } OR { location: WRK name: STG_PART }"
+includeSelector: "{ location: SRC name: LINEITEM } OR { location: SRC name: PART } OR { location: WRK name: STG_LINEITEM } OR { location: WRK name: STG_LINEITEM_PART } OR { location: WRK name: STG_PART } OR { location: WRK name: STG_ORDERS }"
 name: New Job
 type: Job
