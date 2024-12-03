@@ -1,0 +1,96 @@
+fileVersion: 1
+id: a63fec8b-4196-463b-8bc4-dbd5ddfa07c5
+name: EMPLOYEE
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: NEW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 512fa48b-2365-47c5-9ede-6e1416c28b18
+          stepCounter: a63fec8b-4196-463b-8bc4-dbd5ddfa07c5
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6046acbf-43fb-47a9-bcbb-e549fcac491c
+          stepCounter: a63fec8b-4196-463b-8bc4-dbd5ddfa07c5
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b850b6c-6e59-4c48-9056-e06bb114c1c0
+          stepCounter: a63fec8b-4196-463b-8bc4-dbd5ddfa07c5
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: SALARY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9499dea5-77e5-42c1-b482-98dc4f328414
+          stepCounter: a63fec8b-4196-463b-8bc4-dbd5ddfa07c5
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: MANAGER_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('NEW', 'EMPLOYEE') }}
+  name: EMPLOYEE
+  schema: ""
+  sqlType: Source
+  table: EMPLOYEE
+  type: sourceInput
+  version: 1
+type: Node

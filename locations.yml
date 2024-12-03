@@ -1,5 +1,6 @@
 defaultStorageMapping: WRK
 fileVersion: 1
 locations:
+  - NEW
   - SRC
   - WRK

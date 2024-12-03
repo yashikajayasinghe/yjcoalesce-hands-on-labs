@@ -1,6 +1,9 @@
 fileVersion: 1
 id: "30"
 mappingDefinitions:
+  NEW:
+    database: ""
+    schema: ""
   SRC:
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCH_SF10
