@@ -1,6 +1,6 @@
 excludeSelector: ""
 fileVersion: 1
 id: "18"
-includeSelector: "+{ location: WRK name: STG_LINEITEM_PART }"
+includeSelector: "{ location: WRK name: STG_ORDERS } OR { location: SRC name: ORDERS }"
 name: Reg710JobOne
 type: Job
