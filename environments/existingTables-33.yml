@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "33"
+mappingDefinitions:
+  SRC:
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+  WRK:
+    database: AAAA_YJ_P2
+    schema: PL
+name: existingTables
+type: Environment
