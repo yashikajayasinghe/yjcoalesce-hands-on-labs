@@ -1,9 +1,8 @@
 fileVersion: 1
-id: 47014884-c3fa-46cc-9f7e-3a500a51c1e3
+id: 99c17d62-4b0c-440c-b4d6-fae22d519dae
 name: NATION
 operation:
   database: ""
-  dataset: ""
   deployEnabled: true
   description: Nation data as defined by TPC-H
   locationName: SRC
@@ -14,8 +13,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: c0de49b0-3cf5-4ce9-9b54-42256315c06e
-          stepCounter: 47014884-c3fa-46cc-9f7e-3a500a51c1e3
+          columnCounter: fdda5731-d6ab-4faf-8fd1-2aae30a9c681
+          stepCounter: 99c17d62-4b0c-440c-b4d6-fae22d519dae
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -33,8 +32,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 7616a35d-fb23-44df-909f-76d2e1dea8f6
-          stepCounter: 47014884-c3fa-46cc-9f7e-3a500a51c1e3
+          columnCounter: 9424a434-091f-4260-8d99-5e4265c544a8
+          stepCounter: 99c17d62-4b0c-440c-b4d6-fae22d519dae
         config: {}
         dataType: VARCHAR(25)
         defaultValue: ""
@@ -52,8 +51,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 6af84968-577a-47ca-8686-9b85fdbdfbfc
-          stepCounter: 47014884-c3fa-46cc-9f7e-3a500a51c1e3
+          columnCounter: 72fc1083-35a3-41a5-988e-cbabd762dbae
+          stepCounter: 99c17d62-4b0c-440c-b4d6-fae22d519dae
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -71,8 +70,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2ff759f8-2169-4b7f-9359-716452acc0ad
-          stepCounter: 47014884-c3fa-46cc-9f7e-3a500a51c1e3
+          columnCounter: b8872055-9413-47cd-9883-7f1c1e692284
+          stepCounter: 99c17d62-4b0c-440c-b4d6-fae22d519dae
         config: {}
         dataType: VARCHAR(152)
         defaultValue: ""
@@ -85,12 +84,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-    join:
-      joinCondition: FROM {{ ref('SRC', 'NATION') }}
   name: NATION
   schema: ""
   sqlType: Source
-  table: NATION
   type: sourceInput
   version: 1
 type: Node

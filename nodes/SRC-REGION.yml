@@ -1,9 +1,8 @@
 fileVersion: 1
-id: 2307da42-836b-4407-b18d-5e53c901203f
+id: b6425998-408d-415a-a328-0ab240f8533e
 name: REGION
 operation:
   database: ""
-  dataset: ""
   deployEnabled: true
   description: Region data as defined by TPC-H
   locationName: SRC
@@ -14,8 +13,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 78103d85-dd77-4d22-924b-80dcb8cc48e5
-          stepCounter: 2307da42-836b-4407-b18d-5e53c901203f
+          columnCounter: fa14c4c2-a1e8-4a69-a068-2540e721fd53
+          stepCounter: b6425998-408d-415a-a328-0ab240f8533e
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -33,8 +32,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f9766a71-a239-40bf-a576-341d506ddf14
-          stepCounter: 2307da42-836b-4407-b18d-5e53c901203f
+          columnCounter: c354ff19-b151-411f-be1f-7e2be8767c89
+          stepCounter: b6425998-408d-415a-a328-0ab240f8533e
         config: {}
         dataType: VARCHAR(25)
         defaultValue: ""
@@ -52,8 +51,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 88286b83-2bcb-4e58-8397-17508a2ce30e
-          stepCounter: 2307da42-836b-4407-b18d-5e53c901203f
+          columnCounter: cc90977a-b0a7-4e0f-bf58-cc6cdca2b452
+          stepCounter: b6425998-408d-415a-a328-0ab240f8533e
         config: {}
         dataType: VARCHAR(152)
         defaultValue: ""
@@ -66,12 +65,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-    join:
-      joinCondition: FROM {{ ref('SRC', 'REGION') }}
   name: REGION
   schema: ""
   sqlType: Source
-  table: REGION
   type: sourceInput
   version: 1
 type: Node

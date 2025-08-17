@@ -1,9 +1,8 @@
 fileVersion: 1
-id: 1606df44-31f2-495d-b77e-9cbcf473a14c
+id: 88c317a0-f1a1-4bbe-b6ba-19206e600592
 name: CUSTOMER
 operation:
   database: ""
-  dataset: ""
   deployEnabled: true
   description: Customer data as defined by TPC-H
   locationName: SRC
@@ -14,8 +13,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 5cc9e989-ed9d-4664-b491-f1467d2132d8
-          stepCounter: 1606df44-31f2-495d-b77e-9cbcf473a14c
+          columnCounter: f3719dd4-0770-4171-89e8-c2b59831fe79
+          stepCounter: 88c317a0-f1a1-4bbe-b6ba-19206e600592
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -33,12 +32,12 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: d79dd1b2-5470-41d8-bea0-39d1da516860
-          stepCounter: 1606df44-31f2-495d-b77e-9cbcf473a14c
+          columnCounter: a8e84506-8f51-474e-997e-5fb7d39f9762
+          stepCounter: 88c317a0-f1a1-4bbe-b6ba-19206e600592
         config: {}
         dataType: VARCHAR(25)
         defaultValue: ""
-        description: ""
+        description: Customer Name
         name: C_NAME
         nullable: false
         primaryKey: false
@@ -52,8 +51,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 453f29e2-98f7-469b-94b9-9cea09f227b5
-          stepCounter: 1606df44-31f2-495d-b77e-9cbcf473a14c
+          columnCounter: 2f867e16-8eed-4360-b8ee-8ef86f428c15
+          stepCounter: 88c317a0-f1a1-4bbe-b6ba-19206e600592
         config: {}
         dataType: VARCHAR(40)
         defaultValue: ""
@@ -71,8 +70,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 342b840d-5360-44c4-85cc-6b01a50b8aa7
-          stepCounter: 1606df44-31f2-495d-b77e-9cbcf473a14c
+          columnCounter: 8a2491bf-081f-49e6-90a0-35878b6046c0
+          stepCounter: 88c317a0-f1a1-4bbe-b6ba-19206e600592
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -90,8 +89,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 543ffde8-19bd-4142-882b-a6a4802a7492
-          stepCounter: 1606df44-31f2-495d-b77e-9cbcf473a14c
+          columnCounter: dd63a5f3-71d3-489b-a625-46934766455b
+          stepCounter: 88c317a0-f1a1-4bbe-b6ba-19206e600592
         config: {}
         dataType: VARCHAR(15)
         defaultValue: ""
@@ -109,8 +108,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: db5adef4-3c97-4c38-a64e-636b6ec28306
-          stepCounter: 1606df44-31f2-495d-b77e-9cbcf473a14c
+          columnCounter: 00a50891-49a1-4e89-8a77-8f5ad2c3dad3
+          stepCounter: 88c317a0-f1a1-4bbe-b6ba-19206e600592
         config: {}
         dataType: NUMBER(12,2)
         defaultValue: ""
@@ -128,8 +127,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 06e37bfe-40f6-4b92-a7c1-8658f246067e
-          stepCounter: 1606df44-31f2-495d-b77e-9cbcf473a14c
+          columnCounter: a53f8cdc-b039-4a91-917b-71a43677860b
+          stepCounter: 88c317a0-f1a1-4bbe-b6ba-19206e600592
         config: {}
         dataType: VARCHAR(10)
         defaultValue: ""
@@ -147,8 +146,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 0d8cf240-f30d-402e-bd6f-36872a864a7e
-          stepCounter: 1606df44-31f2-495d-b77e-9cbcf473a14c
+          columnCounter: 4613aeb9-fa12-45ac-876b-4d1fd1bfc801
+          stepCounter: 88c317a0-f1a1-4bbe-b6ba-19206e600592
         config: {}
         dataType: VARCHAR(117)
         defaultValue: ""
@@ -161,12 +160,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-    join:
-      joinCondition: FROM {{ ref('SRC', 'CUSTOMER') }}
   name: CUSTOMER
   schema: ""
   sqlType: Source
-  table: CUSTOMER
   type: sourceInput
   version: 1
 type: Node

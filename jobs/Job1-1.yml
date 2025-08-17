@@ -1,6 +1,6 @@
 excludeSelector: ""
 fileVersion: 1
 id: "1"
-includeSelector: "+{ location: WORK name: FCT_LINEITEM_ORDERS_DIM_LOOKUP } "
+includeSelector: "+{ location: WORK name: FCT_LINEITEM_ORDERS_DIM_LOOKUP } OR { location: WORK name: STG_CUSTOMER } OR { location: WORK name: STG_NATION } OR { location: WORK name: STG_REGION }"
 name: Job1
 type: Job
