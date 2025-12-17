@@ -9,7 +9,7 @@ operation:
     testsEnabled: true
     truncateBefore: true
   database: ""
-  deployEnabled: false
+  deployEnabled: true
   description: Nation data as defined by TPC-H
   isMultisource: false
   locationName: WORK
@@ -76,14 +76,17 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          NATION: 99c17d62-4b0c-440c-b4d6-fae22d519dae
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
             nodeName: NATION
         join:
-          joinCondition: FROM {{ ref('SRC', 'NATION') }} "NATION"
+          joinCondition: |-
+            FROM {{ ref('SRC', 'NATION') }} "NATION"
+            WHERE "NATION"."N_NATIONKEY" > 20
         name: STG_NATION
         noLinkRefs: []
   name: STG_NATION

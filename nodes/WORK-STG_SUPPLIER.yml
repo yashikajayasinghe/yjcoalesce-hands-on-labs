@@ -9,7 +9,7 @@ operation:
     testsEnabled: true
     truncateBefore: true
   database: ""
-  deployEnabled: false
+  deployEnabled: true
   description: Supplier data as defined by TPC-H
   isMultisource: false
   locationName: WORK
@@ -118,14 +118,17 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          SUPPLIER: 5e2a1663-dd59-4a2f-98dd-312812a6b529
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
             nodeName: SUPPLIER
         join:
-          joinCondition: FROM {{ ref('SRC', 'SUPPLIER') }} "SUPPLIER"
+          joinCondition: |-
+            FROM {{ ref('SRC', 'SUPPLIER') }} "SUPPLIER"
+            WHERE "SUPPLIER"."S_NATIONKEY" > 20
         name: STG_SUPPLIER
         noLinkRefs: []
   name: STG_SUPPLIER
