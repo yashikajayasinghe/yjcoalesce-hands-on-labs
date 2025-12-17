@@ -1,0 +1,215 @@
+fileVersion: 1
+id: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+name: COPY_REGION
+operation:
+  config:
+    compression: ""
+    dateformat: ""
+    enforceLength: ""
+    errornumber: ""
+    externalURI: Enter external URI-Ex:s3://snowflake-docs
+    extlocation: false
+    fieldDelim: ","
+    fieldEnclosed: \042
+    fileFormatLoc: ""
+    fileFormatName: ""
+    fileFormatType: File Format Name
+    fileNames: ""
+    filePattern: ""
+    fileType: CSV
+    forceLoad: ""
+    inferschema: false
+    intextstage: false
+    loadUncertainFiles: ""
+    onError: ""
+    purgeBehavior: ""
+    recDelim: |+
+
+    replaceinvalidcharacters: false
+    returnFailedOnly: ""
+    sizeLimit: ""
+    skipBlankLines: false
+    skipHeader: "1"
+    stageName: Enter stage name-stage_name/folder_name/
+    stageStorageLocationName: Enter Storage Location name
+    storageintegration: ""
+    stripouterarray: false
+    timeformat: ""
+    timestampformat: ""
+    trimSpace: false
+    truncateBefore: false
+    truncateColumns: ""
+  database: ""
+  deployEnabled: true
+  description: Region data as defined by TPC-H
+  isMultisource: false
+  locationName: NEWSTL
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60263b13-375f-41b8-ac17-70eac42a9327
+          stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: R_REGIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 70c1d03b-6d12-4bb7-9840-5e0a47692a12
+                stepCounter: 98907a93-783c-4ffe-b00c-a3641e328244
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e0b2320e-a9f0-44c5-bed3-9894c2fa28a9
+          stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: R_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 93710876-9994-41b5-b21f-53248e7b1a2f
+                stepCounter: 98907a93-783c-4ffe-b00c-a3641e328244
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e54c970-74ee-4ac3-838a-beaa5c5bf67f
+          stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+        config: {}
+        dataType: VARCHAR(152)
+        description: ""
+        name: R_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ee799652-c895-4dad-ad5a-7358f37055af
+                stepCounter: 98907a93-783c-4ffe-b00c-a3641e328244
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 072a9ada-637c-41d7-a345-41582b37f7ec
+          stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: SRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: $1
+        sysJSON: true
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e3f80edb-4099-4b11-b2be-a562e67aee70
+          stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        name: LOAD_TIMESTAMP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: current_timestamp()::timestamp_ntz
+        sysLdTs: true
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 58db20fe-5c78-4299-9ede-dc045d5fb99d
+          stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: FILENAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: METADATA$FILENAME
+        sysFlNm: true
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f0d4917-0609-4991-aaef-68bb0fc47b62
+          stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: FILE_ROW_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: METADATA$FILE_ROW_NUMBER
+        sysFlRwNm: true
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa27ca75-3c31-448f-8181-cb9a6f36649d
+          stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        name: FILE_LAST_MODIFIED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: METADATA$FILE_LAST_MODIFIED
+        sysFlLtMd: true
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3ad46f59-84e4-4a52-992c-2243ca4732bb
+          stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        name: SCAN_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: METADATA$START_SCAN_TIME
+        sysFlScTm: true
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_REGION: 98907a93-783c-4ffe-b00c-a3641e328244
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_REGION
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_REGION') }} "STG_REGION"
+        name: COPY_REGION
+        noLinkRefs: []
+  name: COPY_REGION
+  overrideSQL: false
+  schema: ""
+  sqlType: ext-data-pkg:::324
+  type: sql
+  version: 1
+type: Node

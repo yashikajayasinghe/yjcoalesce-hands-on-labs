@@ -1,6 +1,9 @@
 fileVersion: 1
 id: "15"
 mappingDefinitions:
+  NEWSTL:
+    database: DEV_YASHIKA
+    schema: PRDPROJ2
   SRC:
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCH_SF10

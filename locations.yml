@@ -1,6 +1,7 @@
 defaultStorageMapping: ZOD
 fileVersion: 1
 locations:
+  - NEWSTL
   - SRC
   - WORK
   - ZOD

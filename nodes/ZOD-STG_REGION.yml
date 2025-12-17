@@ -1,0 +1,180 @@
+fileVersion: 1
+id: 853dd907-1d0d-40ac-99bd-8314391519f8
+name: STG_REGION
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Region data as defined by TPC-H
+  isMultisource: false
+  locationName: ZOD
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e08e0f5a-1de3-4c20-9786-d218cd145f16
+          stepCounter: 853dd907-1d0d-40ac-99bd-8314391519f8
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: R_REGIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 60263b13-375f-41b8-ac17-70eac42a9327
+                stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55752a0c-06fa-4ec0-bc35-0a9e3255f52f
+          stepCounter: 853dd907-1d0d-40ac-99bd-8314391519f8
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: R_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e0b2320e-a9f0-44c5-bed3-9894c2fa28a9
+                stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ee431082-6ee0-4c06-9785-676670e825bd
+          stepCounter: 853dd907-1d0d-40ac-99bd-8314391519f8
+        config: {}
+        dataType: VARCHAR(152)
+        description: ""
+        name: R_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3e54c970-74ee-4ac3-838a-beaa5c5bf67f
+                stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f341f87-79bc-4b43-a922-2ad22033996e
+          stepCounter: 853dd907-1d0d-40ac-99bd-8314391519f8
+        config: {}
+        dataType: VARIANT
+        description: ""
+        name: SRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 072a9ada-637c-41d7-a345-41582b37f7ec
+                stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd22beee-b4ef-4a34-a587-a44655a1b755
+          stepCounter: 853dd907-1d0d-40ac-99bd-8314391519f8
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: LOAD_TIMESTAMP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e3f80edb-4099-4b11-b2be-a562e67aee70
+                stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dd2ac3f9-8e5f-4ffc-927d-d88cea20e0b7
+          stepCounter: 853dd907-1d0d-40ac-99bd-8314391519f8
+        config: {}
+        dataType: STRING
+        description: ""
+        name: FILENAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 58db20fe-5c78-4299-9ede-dc045d5fb99d
+                stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4f0e076-a954-4146-b90d-0451b7494c9b
+          stepCounter: 853dd907-1d0d-40ac-99bd-8314391519f8
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: FILE_ROW_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7f0d4917-0609-4991-aaef-68bb0fc47b62
+                stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1fb3bb2a-58ee-49b0-98ff-4a4f25c7de29
+          stepCounter: 853dd907-1d0d-40ac-99bd-8314391519f8
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: FILE_LAST_MODIFIED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aa27ca75-3c31-448f-8181-cb9a6f36649d
+                stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d7287921-e40f-453a-95dd-b1ecdcce7493
+          stepCounter: 853dd907-1d0d-40ac-99bd-8314391519f8
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        description: ""
+        name: SCAN_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3ad46f59-84e4-4a52-992c-2243ca4732bb
+                stepCounter: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          COPY_REGION: c4c824ab-3861-4bf4-8c1c-764fedb5e471
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('ZOD', 'STG_REGION')}} AS (
+            		SELECT 
+             "R_REGIONKEY" AS "R_REGIONKEY",
+             "R_NAME" AS "R_NAME",
+             "R_COMMENT" AS "R_COMMENT",
+             "SRC" AS "SRC",
+             "LOAD_TIMESTAMP" AS "LOAD_TIMESTAMP",
+             "FILENAME" AS "FILENAME",
+             "FILE_ROW_NUMBER" AS "FILE_ROW_NUMBER",
+             "FILE_LAST_MODIFIED" AS "FILE_LAST_MODIFIED",
+             "SCAN_TIME" AS "SCAN_TIME"
+             FROM {{ ref('ZOD', 'COPY_REGION') }}
+            	)
+        dependencies:
+          - locationName: NEWSTL
+            nodeName: COPY_REGION
+        join:
+          joinCondition: FROM {{ ref('NEWSTL', 'COPY_REGION') }} "COPY_REGION"
+        name: STG_REGION
+        noLinkRefs: []
+  name: STG_REGION
+  overrideSQL: true
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
