@@ -1,5 +1,6 @@
-defaultStorageMapping: WORK
+defaultStorageMapping: ZOD
 fileVersion: 1
 locations:
   - SRC
   - WORK
+  - ZOD
