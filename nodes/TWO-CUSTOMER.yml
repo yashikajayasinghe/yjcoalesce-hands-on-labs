@@ -3,7 +3,6 @@ id: a702167d-f737-428e-9bbf-e7fd539b03cb
 name: CUSTOMER
 operation:
   database: ""
-  dataset: ""
   deployEnabled: true
   description: Customer data as defined by TPC-H
   locationName: TWO
@@ -22,12 +21,10 @@ operation:
         description: ""
         name: C_CUSTKEY
         nullable: false
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
@@ -41,12 +38,10 @@ operation:
         description: Customer Name
         name: C_NAME
         nullable: false
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
@@ -60,12 +55,10 @@ operation:
         description: ""
         name: C_ADDRESS
         nullable: false
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
@@ -79,12 +72,10 @@ operation:
         description: ""
         name: C_NATIONKEY
         nullable: false
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
@@ -98,12 +89,10 @@ operation:
         description: ""
         name: C_PHONE
         nullable: false
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
@@ -117,12 +106,10 @@ operation:
         description: ""
         name: C_ACCTBAL
         nullable: false
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
@@ -136,12 +123,10 @@ operation:
         description: ""
         name: C_MKTSEGMENT
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
@@ -155,18 +140,13 @@ operation:
         description: ""
         name: C_COMMENT
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
-    join:
-      joinCondition: FROM {{ ref('TWO', 'CUSTOMER') }}
   name: CUSTOMER
   schema: ""
   sqlType: Source
-  table: CUSTOMER
   type: sourceInput
   version: 1
 type: Node

@@ -259,8 +259,6 @@ operation:
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases: {}
-        customSQL:
-          customSQL: ""
         dependencies:
           - locationName: ONE
             nodeName: STG_CUSTOMER
