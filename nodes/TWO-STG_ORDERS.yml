@@ -12,7 +12,7 @@ operation:
   deployEnabled: true
   description: Orders data as defined by TPC-H
   isMultisource: false
-  locationName: ONE
+  locationName: TWO
   materializationType: table
   metadata:
     appliedNodeTests: []
@@ -146,12 +146,13 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          ORDERS: 9a2b0989-6718-436b-b36d-c09233ed67b0
         dependencies:
-          - locationName: TWO
+          - locationName: ONE
             nodeName: ORDERS
         join:
-          joinCondition: FROM {{ ref('TWO', 'ORDERS') }} "ORDERS"
+          joinCondition: FROM {{ ref('ONE', 'ORDERS') }} "ORDERS"
         name: STG_ORDERS
         noLinkRefs: []
   name: STG_ORDERS

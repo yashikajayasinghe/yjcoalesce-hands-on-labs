@@ -12,7 +12,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: ONE
+  locationName: TWO
   materializationType: table
   metadata:
     appliedNodeTests: []
@@ -258,17 +258,19 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          STG_CUSTOMER: e2cb2604-ac19-456e-b86f-b0f0ad2d0543
+          STG_ORDERS: 44b1d9dc-0801-4c00-a588-96a626db833d
         dependencies:
-          - locationName: ONE
+          - locationName: TWO
             nodeName: STG_CUSTOMER
-          - locationName: ONE
+          - locationName: TWO
             nodeName: STG_ORDERS
         join:
           joinCondition: |-
-            FROM {{ ref('ONE', 'STG_ORDERS') }} "STG_ORDERS"
-            INNER JOIN {{ ref('ONE', 'STG_CUSTOMER') }} "STG_CUSTOMER"
-            ON "STG_ORDERS"./*COLUMN*/ = "STG_CUSTOMER"./*COLUMN*/
+            FROM {{ ref('TWO', 'STG_ORDERS') }} "STG_ORDERS"
+            INNER JOIN {{ ref('TWO', 'STG_CUSTOMER') }} "STG_CUSTOMER"
+            ON "STG_ORDERS"."O_CUSTKEY" = "STG_CUSTOMER"."C_CUSTKEY"
         name: STG_ORDERS_CUSTOMER
         noLinkRefs: []
   name: STG_ORDERS_CUSTOMER
